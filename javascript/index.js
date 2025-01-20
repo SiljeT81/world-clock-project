@@ -16,6 +16,15 @@ function updateTime() {
 
   parisDateElement.innerHTML = parisTime.format("Do MMMM YYYY");
   parisTimeElement.innerHTML = parisTime.format("HH:mm:ss");
+
+  //Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDateElement = tokyoElement.querySelector(".date");
+  let tokyoTimeElement = tokyoElement.querySelector(".time");
+  let tokyoTime = moment().tz("Asia/Tokyo");
+
+  tokyoDateElement.innerHTML = tokyoTime.format("Do MMMM YYYY");
+  tokyoTimeElement.innerHTML = tokyoTime.format("HH:mm:ss");
 }
 
 function updateCity(event) {
